@@ -1,82 +1,65 @@
 ¿En que se diferencia una serie temporal de un dataset tradicional?
 *
 1 punto
-a. Si tenemos un dataset, podemos ordenar el dataset en función del índice y convertirlo de manera artificial en una serie de tiempo (como lo hace CatBoost).
-b. Cualquier dataset que tenga una fecha (por ejemplo: fecha de nacimiento de un cliente) es una serie de tiempo.
-c. Una serie temporal es un dataset que tiene orden cronológico y cuyos valores pueden depender de los registros anteriores.
+OK Una serie temporal es un dataset que tiene orden cronológico y cuyos valores pueden depender de los registros anteriores.
 
 ¿Qué representa los parámetros p y q de un modelo ARMA?
 *
 1 punto
-a. q: el grado de la parte Autoregresiva del modelo (AR), p: el grado de la parte de Medias Móviles del modelo (MA).
-b. p: el grado de la parte Autoregresiva del modelo (AR), q: el grado de la parte de Medias Móviles del modelo (MA).
+OK p: el grado de la parte Autoregresiva del modelo (AR), q: el grado de la parte de Medias Móviles del modelo (MA).
 
 Qué representa el parámetro d en el modelo ARIMA?
 *
 1 punto
-a. Hace referencia a la diferenciación que es una técnica para convertir la serie en estacionaria.
-b. Representa el número mínimo de días que debe tener la serie de tiempo para poder entrenar un modelo.
+OK Hace referencia a la diferenciación que es una técnica para convertir la serie en estacionaria.
 
 ¿Que técnica permite eliminar la tendencia de una serie temporal y convertirla en estacionaria?
 *
 1 punto
-a. Construir un lag de la serie temporal y eliminar de esta manera la tendencia.
-b. Aplicar el logaritmo a la serie temporal.
-c. Aplicar la diferenciación (restar a cada valor el anterior).
+OK Aplicar la diferenciación (restar a cada valor el anterior).
 
 ¿Que técnica permite reducir la varianza de una serie temporal y convertirla en estacionaria?
 *
 1 punto
-a. Construir un lag de la serie temporal y eliminar de esta manera la tendencia.
-b. Aplicar el logaritmo a la serie temporal.
-c. Aplicar la diferenciación (restar a cada valor el anterior y calcular la variación entre registros).
+OK Aplicar el logaritmo a la serie temporal.
 
 ¿Que significa que una serie temporal sea estacionaria?
 *
 1 punto
-a. Que sus propiedades estadísticas (media, varianza, autocorrelación) no cambian con el tiempo.
-b. Una serie temporal es estacionaria si tiene patrones repetitivos (como sería un aumento de ventas en Navidad o bien un mayor consumo de cerveza en verano) y se debe a que muchas series de tiempo captan diferentes hechos económicos.
+OK Que sus propiedades estadísticas (media, varianza, autocorrelación) no cambian con el tiempo.
 
 ¿Qué papel juega la autocorrelación en el análisis de series temporales?
 *
 1 punto
-a. Ayuda a medir la relación entre valores pasados y presentes de la serie temporal y permite definir los grados AR y MA de un modelo.
-b. Debemos evitar a toda costa la autocorrelación porque es el principal motivo de variables autoexplicativas en un modelo de series de tiempo.
+OK Ayuda a medir la relación entre valores pasados y presentes de la serie temporal y permite definir los grados AR y MA de un modelo.
 
 El modelo Prophet forma parte de la familia de algoritmos:
 *
 1 punto
-a. Basados en árboles de decisión como XGBoost, Random Forest etc.
-b. Es un modelo aditivo de la familia de los GAM (General Additive Model).
-c. Es un modelo paramétrico de la familia de ARIMAs.
+OK Es un modelo aditivo de la familia de los GAM (General Additive Model).
 
 Una de las principales carencias de los modelos basados en árboles de decisión cuando trabajamos con series temporales es:
 *
 1 punto
-a. La falta de interpretabilidad de sus predicciones (modelo black-box).
-b. Los árboles de decisión al predecir siempre medias no son capaces de extrapolar una tendencia.
+OK Los árboles de decisión al predecir siempre medias no son capaces de extrapolar una tendencia.
 
 ¿Como podemos evitar el data leakage en la construcción de las variables en series de tiempo multivariante?
 *
 1 punto
-a. Usar siempre la información del pasado y dividir el dataset según el orden cronológico.
-b. No debemos usar nunca variables que estarán disponibles en el modelo de predicción.
-c. Antes de crear las variables, debemos mezclar las series de tiempo para reducir el leakage.
+OK a. Usar siempre la información del pasado y dividir el dataset según el orden cronológico.
 
 ¿Que hace el siguiente comando de pandas?
 
 df.set_index("date").resample('D').sum()
 *
 1 punto
-a. Agrupa las ventas por día y calcula la media de las ventas.
-b. Agrupa las ventas por día y calcula el total de las ventas.
+OK Agrupa las ventas por día y calcula el total de las ventas.
 
 ¿Qué hace el siguiente bloque de código y por qué podría ser útil?
 df['lag_1'] = df['sales'].shift(1)
 *
 1 punto
-a. Crea una nueva columna con la media móvil. Es una variable muy útil que representa las ventas del día anterior y podría ser muy útil en modelos como el Prophet.
-b. Crea una nueva variable con las ventas del día anterior y se podría usar en modelos como Redes Neuronales o bien XGBoost.
+OK Crea una nueva variable con las ventas del día anterior y se podría usar en modelos como Redes Neuronales o bien XGBoost.
 
 Sección de preguntas relacionadas con código.
 En este apartado vamos a evaluar el conocimiento de los alumnos sobre diferentes aspectos de pandas y feature engineering para series temporales.
@@ -86,9 +69,7 @@ En este apartado vamos a evaluar el conocimiento de los alumnos sobre diferentes
 df['sales_ma7'] = df['sales'].rolling(window=7).mean()
 *
 1 punto
-a. Calcula la media de ventas en un dataset que tiene 7 registros.
-b. Calcula la media móvil de ventas usando una ventana de 7 registros.
-c. Elimina los valores nulos de un dataset.
+OK Calcula la media móvil de ventas usando una ventana de 7 registros.
 
 Mirando el siguiente bloque de código:
 
@@ -97,15 +78,12 @@ df['sales_ma7'] = df['sales'].rolling(window=7).mean()
 ¿Que cambios harías si quieres incorporar esta variable en un modelo de ML?
 *
 1 punto
-a. El código no necesita ningún cambio y se puede incorporar en el modelo.
-b. Aplicaría un shift(1) antes de aplicar el rolling. En caso contrario la columna `sales_ma7` sería autoexplicativa.
-c. Las medias móviles únicamente se deben usar dentro del modelo MA. Por este motivo, no podemos usarlas en un modelo de ML.
+OK Aplicaría un shift(1) antes de aplicar el rolling. En caso contrario la columna `sales_ma7` sería autoexplicativa.
 
 ¿Para que sirve el método de transform de pandas?
 *
 1 punto
-a. Es un método donde aplicamos la regla aprendida en el fit por parte de un scikit-learn Transformer para modificar nuestro dataset.
-b. Es un método muy útil cuando hacemos un groupby para calcular una nueva columna y asignarla al dataset de origen.
+OK Es un método donde aplicamos la regla aprendida en el fit por parte de un scikit-learn Transformer para modificar nuestro dataset.
 
 Sección de preguntas prácticas.
 En este apartado queremos evaluar el conocimiento práctico de los alumnos. Para ello, deben usar el dataset de la clase del BENCHMARK (ts_kaggle_train.csv) y contestar las siguientes preguntas.
