@@ -91,34 +91,27 @@ En este apartado queremos evaluar el conocimiento práctico de los alumnos. Para
 El mes con el mayor número de ventas ha sido (todos los artículos):
 *
 1 punto
-a. 2014-12-31 y la cantidad vendida ha sido de 4.874,0
-b. 2014-11-30 y la cantidad vendida ha sido de 227.200
-c. 2014-12-31 y la cantidad vendida ha sido de 4.332.940,96
+OK 2014-12-31 y la cantidad vendida ha sido de 4.874,0
 
 
 El id de la ciudad con las mayores ventas es:
 *
 1 punto
-a. 0
-b. 22
-c. 7
+
+OK 7
 
 El id de la categoría con los mayores ingresos en el mes de Septiembre-2015 es:
 *
 1 punto
-a. 35
-b. 2
-c. 57
+OK 35
 
 El id de la categoría que tiene mayor número de item_id diferentes es:
 *
 1 punto
-a. La categoría 2 con un total de 272 item_id diferentes.
-b. La categoría 30 tiene un total de 2.924 item_id diferentes.
-c. La categoría 40 con un total 24 item_id diferentes.
+OK La categoría 30 tiene un total de 2.924 item_id diferentes.
+
 
 La media móvil de 3 meses (de todas las ventas) corresponde al mes de:
 *
 1 punto
-a. 2013-03-31 y el valor es de 2434.33 unidades vendidas.
-b. Segundo mes del dataset y el valor es de 30 unidades vendidas.
+OK 2013-03-31 y el valor es de 2434.33 unidades vendidas.
